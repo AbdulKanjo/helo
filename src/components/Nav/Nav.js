@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Axios from "axios";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 class Nav extends Component {
+  logout = e => {
+    Axios.post("/api/logout").then(() => {
+      return <Redirect to="/" />;
+    });
+  };
   render() {
     return (
       <div className="header">
@@ -17,7 +24,7 @@ class Nav extends Component {
         <button>
           <Link to="/post/:postid">New Post</Link>
         </button>
-        <button>
+        <button onClick={this.logout}>
           <Link to="/">Logout</Link>
         </button>
       </div>

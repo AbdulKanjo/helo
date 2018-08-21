@@ -59,7 +59,7 @@ class Auth extends Component {
         </div>
         <div>
           <button onClick={() => this.Login()}>Login</button>
-          <button onClick={() => this.addUser()}>Register</button>
+          <button onClick={() => this.Login()}>Register</button>
           {this.state.fireRedirect && <Redirect to={"/dashboard"} />}
         </div>
       </div>

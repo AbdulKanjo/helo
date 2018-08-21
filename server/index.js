@@ -1,7 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
-const { NewUser, Login, getPosts, getPostByID } = require("./controller");
+const {
+  NewUser,
+  Login,
+  getPosts,
+  getPostByID,
+  logout
+} = require("./controller");
 const massive = require("massive");
 const app = express();
 app.use(bodyParser.json());
@@ -29,6 +35,7 @@ app.post("/api/auth/register", NewUser);
 app.post("/api/auth/login", Login);
 app.get("/api/getposts", getPosts);
 app.get("/api/posts/:post_id", getPostByID);
+app.post("/api/logout", logout);
 
 const port = 3001;
 app.listen(port, () => {
