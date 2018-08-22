@@ -22,7 +22,7 @@ class Nav extends Component {
           <Link to="/dashboard">Home</Link>
         </button>
         <button>
-          <Link to="/post/:postid">New Post</Link>
+          <Link to="/new">New Post</Link>
         </button>
         <button onClick={this.logout}>
           <Link to="/">Logout</Link>

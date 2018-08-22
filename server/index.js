@@ -6,7 +6,8 @@ const {
   Login,
   getPosts,
   getPostByID,
-  logout
+  logout,
+  addPost
 } = require("./controller");
 const massive = require("massive");
 const app = express();
@@ -36,6 +37,7 @@ app.post("/api/auth/login", Login);
 app.get("/api/getposts", getPosts);
 app.get("/api/posts/:post_id", getPostByID);
 app.post("/api/logout", logout);
+app.post("/api/new", addPost);
 
 const port = 3001;
 app.listen(port, () => {
