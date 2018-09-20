@@ -55,11 +55,6 @@ class Dashboard extends Component {
           />
           <button onClick={() => this.handleReset()}>Reset</button>
           <label>My POsts</label>
-          {/* <input
-            type="checkbox"
-            defaultChecked={this.state.myPosts}
-            onClick={this.handleCheckBox()}
-          /> */}
         </div>
         {posts}
       </div>

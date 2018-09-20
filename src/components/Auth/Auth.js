@@ -8,7 +8,6 @@ class Auth extends Component {
   constructor() {
     super();
     this.state = {
-      // username: "", redux
       password: "",
       fireRedirect: false
     };

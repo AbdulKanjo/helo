@@ -5,7 +5,7 @@ const initialState = {
 };
 
 const UPDATE_USERNAME = "UPDATE_USERNAME";
-// const UPDATE_ID = "UPDATE_ID";
+
 const UPDATE_PROFILE_PIC = "UPDATE_PROFILE_PIC";
 
 export default function reducer(state = initialState, action) {
