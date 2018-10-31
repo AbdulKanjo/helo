@@ -14,7 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 const session = require("express-session");
 app.use(express.static(`${__dirname}/../build`));
-
+//test
 massive(process.env.CONNECTION_STRING)
   .then(db => {
     app.set("db", db);
